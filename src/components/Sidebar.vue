@@ -50,8 +50,7 @@
           <Logo />
         </div>
 
-        <h1 class="mb-4 text-xl">Menù</h1>
-        <div class="flex flex-col gap-y-2">
+         <div class="flex flex-col gap-y-2">
           <router-link :to="{ name: 'homepage' }">
             <p
               class="text-myblack cursor-pointer hover:text-secondary hover:fill-secondary hover:font-bold"
@@ -60,16 +59,16 @@
               <span class="flex items-center gap-x-2"><Home />Home</span>
             </p></router-link
           >
-          <router-link :to="{ name: 'homepage' }">
+          <router-link :to="{ name: 'services' }">
             <p
-              class="text-myblack cursor-pointer hover:text-secondary hover:fill-secondary hover:font-bold"
+              class="text-myblack cursor-pointer hover:text-secondary hover:fill-secondary hover:font-bold" :class="$route.name =='services' ? 'text-secondary font-bold fill-secondary' : '' "
             >
               <span class="flex items-center gap-x-2"><Services />Servizi</span>
             </p>
           </router-link>
-          <router-link :to="{ name: 'homepage' }">
+          <router-link :to="{ name: 'works' }">
             <p
-              class="text-myblack cursor-pointer hover:text-secondary hover:fill-secondary hover:font-bold"
+              class="text-myblack cursor-pointer hover:text-secondary hover:fill-secondary hover:font-bold" :class="$route.name =='works' ? 'text-secondary font-bold fill-secondary' : '' "
             >
               <span class="flex items-center gap-x-2"><Gallery />Lavori</span>
             </p></router-link
