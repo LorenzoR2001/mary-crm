@@ -11,18 +11,17 @@ const api = axios.create({
 //----------------------------------------------------------------
 //----------------------------------------------------------------
  
-const getWorks = (data) => {
-  return api.get("getWorks.php", {
-    /*  headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.getItem("token"),
-    }, */
-    params: data,
-  });
-}; 
+ 
+ const getApi = (data) => {
+  return api.post("main.php", data ,{
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    },
+   });
+};
 
 export default {
- 
-  getWorks,
-  baseURL,
+   baseURL,
+  getApi,
 };
+

@@ -1,5 +1,5 @@
 <template>
-  <tr class="border bg-primary  border-black">
+  <tr class="border    border-black">
     <slot> </slot>
 
   </tr>

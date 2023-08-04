@@ -2,26 +2,28 @@ import { createWebHistory, createRouter } from "vue-router";
 import Homepage from "./components/Homepage.vue";
 import Services from "./components/Services.vue";
 import Works from "./components/Works.vue";
-
-const routes = [
+const path='7Xv3nH6bCkZ8YsKtDqMw9P4GjLcWxR';
+ const routes = [
   {
-    path: "/",
+    path: "/"+path,
     name: "homepage",
     component: Homepage,
   },
   {
-    path: "/services",
+    path:   "/"+path+"/services",
     name: "services",
     component: Services,
   },
   {
-    path: "/works",
+    path:  "/"+path+"/works",
     name: "works",
     component: Works,
   },
 ];
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes,  base: "/"+path+"/",
+  mode:"history"
+
 });
 export default router;

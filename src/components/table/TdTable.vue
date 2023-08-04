@@ -1,6 +1,6 @@
 <template>
-  <td class="border bg-primary  p-3 border-black">
-    {{ value }}
+  <td class="border text-sm text-black p-3 border-primary">
+    <slot></slot>
   </td>
 </template>
 
